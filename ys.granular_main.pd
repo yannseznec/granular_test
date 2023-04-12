@@ -1,0 +1,156 @@
+#N canvas 350 141 972 691 10;
+#X obj 28 179 hsl 175 15 0 1 0 0 \$1-sample_offset \$1-sample_offset_rcv
+sample\\\ offset -2 -4 1 10 #fffba5 #404040 #000000 0 1;
+#X obj 225 10 tgl 30 1 \$1-on_off \$1-on_off_rcv on/off 32 26 0 10
+#9bc99d #000000 #000000 0 1;
+#X obj 225 44 tgl 30 1 \$1-record \$1-record_rcv record 32 26 1 10
+#ffc7c6 #000000 #000000 0 1;
+#X obj 12 526 bng 15 250 50 0 midi-properties midi-properties_rcv midi-properties
+17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 12 508 bng 15 250 50 0 audio-properties audio-properties_rcv
+audio-properties 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 258 10 bng 15 250 50 0 \$1-play_one_grain \$1-play_one_grain_rcv
+play\\\ one 17 7 1 10 #9bc99d #000000 #000000;
+#X text 31 760 by yann seznec // yannseznec.com;
+#X obj 226 212 cnv 15 95 100 empty empty autoplay 5 12 1 14 #e0e0e0
+#404040 0;
+#X obj 232 287 hsl 80 15 0 1 0 1 \$1-autoplay_speed \$1-autoplay_speed_rcv
+speed -2 -4 1 10 #fcfcfc #000000 #000000 1000 1;
+#X obj 230 261 tgl 12 1 \$1-freeze \$1-freeze_rcv freeze 17 7 1 10
+#fcfcfc #000000 #000000 0 1;
+#X obj 293 216 tgl 20 1 \$1-autoplay_on_off \$1-autoplay_on_off_rcv
+on/off -2 25 1 10 #9bc99d #000000 #000000 0 1;
+#X obj 230 242 tgl 12 1 \$1-autoplay_reverse \$1-autoplay_reverse_rcv
+reverse 17 7 1 10 #fcfcfc #000000 #000000 0 1;
+#X obj 226 108 cnv 15 95 100 empty empty input 5 12 1 14 #e0e0e0 #404040
+0;
+#X obj 230 184 tgl 15 0 \$1-input_monitor \$1-input_monitor_rcv monitor
+17 7 1 10 #fcfcfc #000000 #000000 0 1;
+#X obj 230 133 vradio 15 1 1 3 \$1-stereoms \$1-stereoms_rcv empty
+0 -8 0 10 #fcfcfc #000000 #000000 2;
+#X obj 248 140 cnv 15 20 10 empty empty stereo 0 0 1 10 #dfdfdf #404040
+0;
+#X obj 247 156 cnv 15 20 10 empty empty mid/side 0 0 1 10 #dfdfdf #404040
+0;
+#X obj 247 170 cnv 15 20 10 empty empty mono 0 0 1 10 #dfdfdf #404040
+0;
+#X obj 226 316 cnv 15 95 130 empty empty output 5 12 1 14 #e0e0e0 #404040
+0;
+#X obj 235 402 hsl 30 10 0 1 0 1 \$1-global_pan \$1-global_pan_rcv
+empty -2 -8 1 10 #fcfcfc #000000 #000000 1500 1;
+#X obj 232 339 vsl 35 60 0.01 1.4 1 1 \$1-volume \$1-volume_rcv empty
+-6 -9 1 10 #fcfcfc #000000 #000000 0 1;
+#X obj 287 327 vu 8 80 \$1-vu-L empty 20 10 1 24 #404040 #000000 0
+0;
+#X obj 299 327 vu 8 80 \$1-vu-R empty 20 10 1 24 #404040 #000000 0
+0;
+#X obj 25 216 cnv 15 180 250 empty empty empty 20 12 0 14 #194b19 #404040
+0;
+#X obj 234 425 hsl 75 15 0 1 0 1 \$1-random_panning \$1-random_panning_rcv
+panning\\\ random -2 -4 1 10 #ffffff #000000 #000000 5400 1;
+#X obj 42 240 hsl 128 15 0 1 0 1 \$1-offset_random \$1-offset_random_rcv
+offset\\\ random -2 -4 1 10 #fffba5 #000000 #ffffff 200 1;
+#X obj 42 305 hsl 128 15 0 1 0 1 \$1-grain_pitch \$1-grain_pitch_rcv
+pitch -2 -4 1 10 #9bc9dd #ffffff #ffffff 3175 1;
+#X obj 40 273 tgl 15 1 \$1-reverse \$1-reverse_rcv reverse 17 7 1 10
+#9bc9dd #000000 #ffffff 0 1;
+#X obj 94 273 tgl 15 1 \$1-reverse_random \$1-reverse_random_rcv reverse\\\ random
+17 7 1 10 #9bc9dd #000000 #ffffff 0 1;
+#X obj 173 305 bng 15 250 50 0 \$1-reset_pitch \$1-reset_pitch_rcv
+empty 17 7 1 10 #9bc9dd #000000 #000000;
+#X obj 43 336 hsl 128 15 0 1 0 1 \$1-random_pitch \$1-random_pitch_rcv
+pitch\\\ random -2 -4 1 10 #9bc9dd #ffffff #ffffff 0 1;
+#X obj 43 371 hsl 128 15 0.001 1 0 1 \$1-grain_size \$1-grain_size_rcv
+grain\\\ size -2 -4 1 10 #eab8fe #ffffff #ffffff 10157 1;
+#X obj 43 400 hsl 128 15 0.002 1 0 1 \$1-grain_density \$1-grain_density_rcv
+grain\\\ density -2 -4 1 10 #eab8fe #ffffff #ffffff 1199 1;
+#X obj 43 429 hsl 128 15 0 1 0 1 \$1-grainplay_chance \$1-grainplay_chance_rcv
+grainplay\\\ chance -2 -4 1 10 #eab8fe #ffffff #ffffff 12700 1;
+#X obj 292 121 vu 8 80 \$1-input_vu-L empty 20 10 1 24 #404040 #000000
+0 0;
+#X obj 304 121 vu 8 80 \$1-input_vu-R empty 20 10 1 24 #404040 #000000
+0 0;
+#X msg 368 476 vis 1;
+#N canvas 441 25 447 847 \$1-help 0;
+#X obj 20 24 cnv 15 400 800 empty empty ys.granular 20 12 1 25 #f1f4f4
+#404040 0;
+#X text 35 222 most parameters can be accessed through send/receive
+objects. to control a parameter the best option is to use the "receive"
+setting for the GUI slider (or toggle or bang).;
+#X obj 216 306 loadbang;
+#X obj 216 327 i \$1;
+#X floatatom 216 348 5 0 0 1 this\ is\ the\ identifier - - 0;
+#X obj 39 347 send \$1-sample_offset_rcv;
+#X obj 42 323 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X text 33 305 try me!;
+#X text 33 405 nearly all of the parameters are float values between
+0-1.;
+#X text 33 427 for "pitch" \, the pitch is unchanged at a value of
+0.25.;
+#X msg 34 564 \; \$1-grain_pitch_rcv 0.25 \; \$1-grain_size_rcv 0.5
+\; \$1-sample_offset_rcv 0.5 \; \$1-offset_random_rcv 0.02 \; \$1-random_pitch_rcv
+0 \; \$1-random_panning_rcv 0.6 \; \$1-global_pan_rcv 0.5 \; \$1-autoplay_speed_rcv
+0.25 \; \$1-autoplay_reverse_rcv 0 \; \$1-freeze_rcv 0 \; \$1-autoplay_on_off_rcv
+0 \; \$1-on_off_rcv 1 \; \$1-volume_rcv 1 \; \$1-num_channels_rcv 2
+\; \$1-reverse_rcv 0 \; \$1-reverse_random_rcv 0 \; \$1-grain_density_rcv
+0.1 \; \$1-grainplay_chance_rcv 1 \;;
+#X obj 34 510 i \$1;
+#X floatatom 34 531 5 0 0 1 this\ is\ the\ identifier - - 0;
+#X obj 34 482 bng 15 250 50 0 empty empty load\\\ a\\\ set\\\ of\\\ values
+17 7 0 10 #fcfcfc #000000 #000000;
+#X text 33 449 you can change a bunch of values at once using a message
+box like this...like a really clunky preset manager:;
+#X text 209 609 a few that aren't listed there:;
+#X msg 220 751 \; pd dsp 1;
+#X obj 220 726 loadbang;
+#X text 210 635 \$1-choose_sound_rcv;
+#X text 34 785 the send names for all of the GUI objects are the same
+as above \, without the "_rcv" suffix.;
+#X text 210 651 \$1-reset_pitch_rcv;
+#X text 334 636 (bang);
+#X text 333 652 (bang);
+#X text 209 669 \$1-record_rcv (toggle);
+#X text 208 686 \$1-play_one_grain_rcv;
+#X text 341 687 (bang);
+#X text 40 548 see this list for the accessible parameter names.;
+#X obj 40 65 cnv 15 1 1 empty empty a\\\ pretty\\\ standard\\\ granular\\\ audio\\\ exploration\\\ system
+0 0 0 12 #f1f3f3 #404040 0;
+#X obj 39 88 cnv 15 1 1 empty empty yannseznec.com\\\ yann@yannseznec.com
+0 0 0 12 #f1f3f3 #404040 0;
+#X text 35 106 to use \, create a top-level patch and add the ys.granular_main.pd
+patch as an object \, with an integer argument that acts as an identifier.
+;
+#X text 35 181 you can have multiple instances of ys.granular_main.pd
+running \, so long as they each have different identifier numbers.
+;
+#X text 34 271 these are accessed with the identifier number followed
+by the name. from within the patch (like right now) \, use \$1.;
+#X text 34 372 from outside the patch \, the equivalent send argument
+would be "1-sample_offset_rcv".;
+#X text 35 157 thanks to Balwyn on the Pd forums for the nice waveform!
+;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 6 0 5 0;
+#X connect 11 0 12 0;
+#X connect 12 0 10 0;
+#X connect 13 0 11 0;
+#X connect 17 0 16 0;
+#X coords 0 847 1 846 85 10 0;
+#X restore 13 566 pd \$1-help;
+#X f 15;
+#X obj 368 497 s pd-\$1-help;
+#X obj 230 451 bng 15 250 50 0 \$1-help empty help 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 370 457 r \$1-help;
+#X obj 309 81 bng 10 250 50 0 \$1-choose_sound \$1-choose_sound_rcv
+choose\\\ sound -66 5 1 10 #c7c6ff #000000 #000000;
+#X obj 309 95 bng 10 250 50 0 \$1-clear \$1-clear_rcv clear\\\ array
+-53 5 1 10 #c7c6ff #000000 #2f004d;
+#X obj 258 44 tgl 15 1 \$1-recordLoop \$1-recordLoop_rcv liveGrains
+16 8 1 10 #ffc7c6 #000000 #000000 0 1;
+#X obj 12 545 ys.granular_brain \$1 \$2;
+#X connect 36 0 38 0;
+#X connect 40 0 36 0;
+#X coords 0 691 1 690 350 500 0;

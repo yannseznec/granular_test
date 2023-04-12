@@ -1,0 +1,16 @@
+#N canvas 47 209 1186 546 12;
+#X text 112 94 Gas;
+#X msg 86 190 1;
+#X obj 86 162 loadbang;
+#X obj 66 241 send 1-volume_rcv;
+#X obj 205 243 send 1-on_off_rcv;
+#X msg 157 188 0;
+#X obj 60 69 ys.granular_main 1 river.wav;
+#X obj 351 246 s 1-grain_density_rcv;
+#X msg 347 209 0.8;
+#X connect 1 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 2 0 8 0;
+#X connect 5 0 4 0;
+#X connect 8 0 7 0;
