@@ -2,7 +2,7 @@
 #X obj 28 179 hsl 175 15 0 1 0 0 \$1-sample_offset \$1-sample_offset_rcv
 sample\\\ offset -2 -4 1 10 #fffba5 #404040 #000000 0 1;
 #X obj 225 10 tgl 30 1 \$1-on_off \$1-on_off_rcv on/off 32 26 0 10
-#9bc99d #000000 #000000 0 1;
+#9bc99d #000000 #000000 1 1;
 #X obj 225 44 tgl 30 1 \$1-record \$1-record_rcv record 32 26 1 10
 #ffc7c6 #000000 #000000 0 1;
 #X obj 12 526 bng 15 250 50 0 midi-properties midi-properties_rcv midi-properties
@@ -39,11 +39,7 @@ reverse 17 7 1 10 #fcfcfc #000000 #000000 0 1;
 #X obj 235 402 hsl 30 10 0 1 0 1 \$1-global_pan \$1-global_pan_rcv
 empty -2 -8 1 10 #fcfcfc #000000 #000000 1500 1;
 #X obj 232 339 vsl 35 60 0.01 1.4 1 1 \$1-volume \$1-volume_rcv empty
--6 -9 1 10 #fcfcfc #000000 #000000 0 1;
-#X obj 287 327 vu 8 80 \$1-vu-L empty 20 10 1 24 #404040 #000000 0
-0;
-#X obj 299 327 vu 8 80 \$1-vu-R empty 20 10 1 24 #404040 #000000 0
-0;
+-6 -9 1 10 #fcfcfc #000000 #000000 5498 1;
 #X obj 25 216 cnv 15 180 250 empty empty empty 20 12 0 14 #194b19 #404040
 0;
 #X obj 234 425 hsl 75 15 0 1 0 1 \$1-random_panning \$1-random_panning_rcv
@@ -63,7 +59,7 @@ pitch\\\ random -2 -4 1 10 #9bc9dd #ffffff #ffffff 0 1;
 #X obj 43 371 hsl 128 15 0.001 1 0 1 \$1-grain_size \$1-grain_size_rcv
 grain\\\ size -2 -4 1 10 #eab8fe #ffffff #ffffff 10157 1;
 #X obj 43 400 hsl 128 15 0.002 1 0 1 \$1-grain_density \$1-grain_density_rcv
-grain\\\ density -2 -4 1 10 #eab8fe #ffffff #ffffff 1199 1;
+grain\\\ density -2 -4 1 10 #eab8fe #ffffff #ffffff 1055 1;
 #X obj 43 429 hsl 128 15 0 1 0 1 \$1-grainplay_chance \$1-grainplay_chance_rcv
 grainplay\\\ chance -2 -4 1 10 #eab8fe #ffffff #ffffff 12700 1;
 #X obj 292 121 vu 8 80 \$1-input_vu-L empty 20 10 1 24 #404040 #000000
@@ -151,6 +147,6 @@ choose\\\ sound -66 5 1 10 #c7c6ff #000000 #000000;
 #X obj 258 44 tgl 15 1 \$1-recordLoop \$1-recordLoop_rcv liveGrains
 16 8 1 10 #ffc7c6 #000000 #000000 0 1;
 #X obj 12 545 ys.granular_brain \$1 \$2;
-#X connect 36 0 38 0;
-#X connect 40 0 36 0;
+#X connect 34 0 36 0;
+#X connect 38 0 34 0;
 #X coords 0 691 1 690 350 500 0;
